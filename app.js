@@ -5,7 +5,7 @@ const PRODUCTS = [
   { id: 'milk', name: 'Milk', price: 1.50 }
 ];
 // Replace these with your EmailJS values (instructions below)
-const EMAILJS_SERVICE_ID = 'YOUR_EMAILJS_SERVICE_ID';
+const EMAILJS_SERVICE_ID = 'service_439nqum';
 const EMAILJS_TEMPLATE_ID = 'template_u1gjjhb';
 const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID'; // sometimes called Public Key
 
