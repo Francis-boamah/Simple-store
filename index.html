@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Store</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <!-- Screen 1: product list -->
+    <section id="products-screen">
+      <h1>Simple Store</h1>
+      <div id="products"></div>
+      <button id="toCheckout">Go to Checkout</button>
+    </section>
+
+    <!-- Screen 2: checkout form -->
+    <section id="checkout-screen" class="hidden">
+      <h1>Checkout</h1>
+      <div id="summary"></div>
+      <label>Phone <input id="phone" type="tel" placeholder="024xxxxxxxx"></label>
+      <label>House <input id="house" type="text" placeholder="House name"></label>
+      <label>Room <input id="room" type="text" placeholder="Room number"></label>
+      <button id="submitOrder">Submit Order</button>
+      <button id="backToProducts">Back</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js').catch(()=>{/*sw register fail*/});
+}
+</script>
+</body>
+</html>
