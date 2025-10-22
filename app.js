@@ -7,7 +7,7 @@ const PRODUCTS = [
 // Replace these with your EmailJS values (instructions below)
 const EMAILJS_SERVICE_ID = 'service_439nqum';
 const EMAILJS_TEMPLATE_ID = 'template_u1gjjhb';
-const EMAILJS_USER_ID = 'YOUR_EMAILJS_USER_ID'; // sometimes called Public Key
+const EMAILJS_USER_ID = 'T3iajj2ahm3C__xNW'; // sometimes called Public Key
 
 // ----- UI references -----
 const productsDiv = document.getElementById('products');
@@ -100,7 +100,7 @@ async function submitOrder(){
   };
 
   try{
-    await emailjs.send(service_439nqum, template_u1gjjhb, templateParams);
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
     alert('Order sent. Thank you!');
     // reset quantities and go back
     PRODUCTS.forEach(p=> document.getElementById(`qty_${p.id}`).value = 0);
